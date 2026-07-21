@@ -226,7 +226,13 @@ section { position: relative; }
 }
 @keyframes spin { to { transform: rotate(360deg); } }
 .dress-illustration { width: 260px; filter: drop-shadow(0 20px 30px rgba(122,43,61,0.25)); animation: floatY 5s ease-in-out infinite; }
-.dress-illustration--hero { width: 300px; }
+.dress-illustration--hero { width: auto; height: 400px; max-width: 90%; }
+.about__frame .dress-illustration {
+  width: auto;
+  height: auto;
+  max-width: 82%;
+  max-height: 82%;
+}
 @keyframes floatY {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-16px); }
@@ -438,7 +444,17 @@ section { position: relative; }
   overflow: hidden;
 }
 .card__media svg { width: 130px; transition: transform var(--transition); }
-.card:hover .card__media svg { transform: scale(1.08) rotate(-2deg); }
+.card__media img {
+  max-width: 78%;
+  max-height: 88%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 18px rgba(122,43,61,0.2));
+  transition: transform var(--transition);
+}
+.card:hover .card__media svg,
+.card:hover .card__media img { transform: scale(1.08) rotate(-2deg); }
 .card__tag {
   position: absolute; top: 16px; left: 16px;
   background: rgba(255,255,255,0.85);
@@ -698,7 +714,7 @@ section { position: relative; }
   }
   .hero__art { height: 260px; margin-bottom: 20px; }
   .hero__ring { width: 220px; height: 220px; }
-  .dress-illustration--hero { width: 170px; }
+  .dress-illustration--hero { height: 230px; width: auto; }
   .floating-tag { font-size: 0.7rem; padding: 6px 12px; }
   .floating-tag--1 { top: 4%; left: 2%; }
   .floating-tag--2 { bottom: 6%; right: 0%; }

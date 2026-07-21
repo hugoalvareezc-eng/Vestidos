@@ -115,13 +115,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------------- Collection cards (generated) ---------------- */
   const dresses = [
-    { name: 'Vestido Aurora', category: 'boda', tag: 'Boda', price: '$4,200', colorA: '#f6e9ea', colorB: '#e3aab8', desc: 'Encaje francés y cola desmontable.' },
+    { name: 'Vestido Celeste', category: 'quince', tag: 'Quince años', price: '$3,800', photo: 'assets/img/vestido-quince-azul.png', desc: 'Falda voluminosa en tul bordado con pedrería y aplicaciones florales.' },
+    { name: 'Vestido Primavera', category: 'quince', tag: 'Quince años', price: '$3,600', photo: 'assets/img/vestido-quince-rosa.png', desc: 'Escote y mangas abullonadas con encaje floral en rosa palo.' },
+    { name: 'Vestido Valentina', category: 'boda', tag: 'Boda', price: '$5,400', photo: 'assets/img/vestido-boda-marfil.png', desc: 'Corte sirena asimétrico con abertura, pedrería y encaje francés.' },
     { name: 'Vestido Serenata', category: 'fiesta', tag: 'Fiesta', price: '$1,850', colorA: '#fdf1de', colorB: '#e8cd9a', desc: 'Brillo sutil, ideal para celebrar.' },
     { name: 'Vestido Medianoche', category: 'noche', tag: 'Noche', price: '$2,300', colorA: '#f1e2e6', colorB: '#7a2b3d', desc: 'Corte sirena en satín profundo.' },
-    { name: 'Vestido Primavera', category: 'casual', tag: 'Casual', price: '$980', colorA: '#eef6ec', colorB: '#9dc3a1', desc: 'Ligero, fresco y muy versátil.' },
-    { name: 'Vestido Celeste', category: 'fiesta', tag: 'Fiesta', price: '$1,650', colorA: '#eaf1fb', colorB: '#9db8e0', desc: 'Falda voluminosa con tul suave.' },
     { name: 'Vestido Eterna', category: 'boda', tag: 'Boda', price: '$5,100', colorA: '#fbf7f0', colorB: '#c9a35a', desc: 'Bordado de pedrería a mano.' },
     { name: 'Vestido Ámbar', category: 'noche', tag: 'Noche', price: '$1,990', colorA: '#fdece0', colorB: '#d98040', desc: 'Escote en V con abertura lateral.' },
+    { name: 'Vestido Menta', category: 'casual', tag: 'Casual', price: '$980', colorA: '#eef6ec', colorB: '#9dc3a1', desc: 'Ligero, fresco y muy versátil.' },
     { name: 'Vestido Brisa', category: 'casual', tag: 'Casual', price: '$760', colorA: '#f3f7f7', colorB: '#a7c4c4', desc: 'Perfecto para el día a día con estilo.' },
   ];
 
@@ -144,10 +145,16 @@ document.addEventListener('DOMContentLoaded', () => {
     card.className = 'card';
     card.dataset.category = d.category;
     card.style.setProperty('--delay', `${(i % 3) * 120}ms`);
+    const media = d.photo
+      ? `<img src="${d.photo}" alt="${d.name}, ${d.tag.toLowerCase()}" loading="lazy">`
+      : dressSVG(d.colorA, d.colorB);
+    const bg = d.photo
+      ? `linear-gradient(160deg, #f7ece4, #ffffff)`
+      : `linear-gradient(160deg, ${d.colorA}, #ffffff)`;
     card.innerHTML = `
-      <div class="card__media" style="background:linear-gradient(160deg, ${d.colorA}, #ffffff)">
+      <div class="card__media" style="background:${bg}">
         <span class="card__tag">${d.tag}</span>
-        ${dressSVG(d.colorA, d.colorB)}
+        ${media}
       </div>
       <div class="card__body">
         <h3>${d.name}</h3>
