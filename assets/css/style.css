@@ -130,13 +130,9 @@ section { position: relative; }
   opacity: 0;
   animation: preloaderPulse 1.4s ease-in-out infinite;
 }
-.preloader__logo {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-weight: 600;
-  font-size: 2.5rem;
-  color: var(--cream);
-  letter-spacing: 4px;
+.preloader__wordmark {
+  height: 54px;
+  width: auto;
   opacity: 0;
   animation: preloaderPulse 1.4s ease-in-out infinite;
 }
@@ -173,19 +169,19 @@ section { position: relative; }
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: var(--font-serif);
-  font-size: 1.9rem;
-  font-style: italic;
-  font-weight: 600;
-  color: var(--burgundy-dark);
-  letter-spacing: 0.5px;
 }
 .navbar__crown {
   height: 52px;
   width: auto;
   transition: height var(--transition);
 }
+.navbar__wordmark {
+  height: 32px;
+  width: auto;
+  transition: height var(--transition);
+}
 .navbar.is-scrolled .navbar__crown { height: 40px; }
+.navbar.is-scrolled .navbar__wordmark { height: 26px; }
 .navbar__nav { display: flex; align-items: center; gap: 32px; }
 .nav-link {
   font-size: 0.92rem;
