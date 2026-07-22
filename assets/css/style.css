@@ -17,7 +17,6 @@
 
   --font-serif: 'Playfair Display', serif;
   --font-sans: 'Poppins', sans-serif;
-  --font-logo: 'Jost', sans-serif;
 
   --shadow-sm: 0 4px 14px rgba(43, 29, 34, 0.08);
   --shadow-md: 0 12px 30px rgba(43, 29, 34, 0.12);
@@ -132,7 +131,9 @@ section { position: relative; }
   animation: preloaderPulse 1.4s ease-in-out infinite;
 }
 .preloader__logo {
-  font-family: var(--font-logo);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 600;
   font-size: 2.5rem;
   color: var(--cream);
   letter-spacing: 4px;
@@ -172,11 +173,12 @@ section { position: relative; }
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: var(--font-logo);
+  font-family: var(--font-serif);
   font-size: 1.9rem;
-  font-weight: 400;
+  font-style: italic;
+  font-weight: 600;
   color: var(--burgundy-dark);
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 .navbar__crown {
   height: 52px;
