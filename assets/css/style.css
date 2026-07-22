@@ -17,6 +17,7 @@
 
   --font-serif: 'Playfair Display', serif;
   --font-sans: 'Poppins', sans-serif;
+  --font-logo: 'Jost', sans-serif;
 
   --shadow-sm: 0 4px 14px rgba(43, 29, 34, 0.08);
   --shadow-md: 0 12px 30px rgba(43, 29, 34, 0.12);
@@ -125,13 +126,13 @@ section { position: relative; }
   gap: 6px;
 }
 .preloader__crown {
-  height: 56px;
+  height: 96px;
   width: auto;
   opacity: 0;
   animation: preloaderPulse 1.4s ease-in-out infinite;
 }
 .preloader__logo {
-  font-family: var(--font-serif);
+  font-family: var(--font-logo);
   font-size: 2.5rem;
   color: var(--cream);
   letter-spacing: 4px;
@@ -171,18 +172,18 @@ section { position: relative; }
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: var(--font-serif);
-  font-size: 1.6rem;
-  font-weight: 700;
+  font-family: var(--font-logo);
+  font-size: 1.9rem;
+  font-weight: 400;
   color: var(--burgundy-dark);
   letter-spacing: 1px;
 }
 .navbar__crown {
-  height: 32px;
+  height: 52px;
   width: auto;
   transition: height var(--transition);
 }
-.navbar.is-scrolled .navbar__crown { height: 26px; }
+.navbar.is-scrolled .navbar__crown { height: 40px; }
 .navbar__nav { display: flex; align-items: center; gap: 32px; }
 .nav-link {
   font-size: 0.92rem;
