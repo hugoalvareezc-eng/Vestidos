@@ -115,15 +115,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------------- Collection cards (generated) ---------------- */
   const dresses = [
-    { name: 'Vestido Celeste', category: 'quince', tag: 'Quince años', price: '$3,800', photo: 'assets/img/vestido-quince-azul.png', desc: 'Falda voluminosa en tul bordado con pedrería y aplicaciones florales.' },
-    { name: 'Vestido Primavera', category: 'quince', tag: 'Quince años', price: '$3,600', photo: 'assets/img/vestido-quince-rosa.png', desc: 'Escote y mangas abullonadas con encaje floral en rosa palo.' },
-    { name: 'Vestido Valentina', category: 'boda', tag: 'Boda', price: '$5,400', photo: 'assets/img/vestido-boda-marfil.png', desc: 'Corte sirena asimétrico con abertura, pedrería y encaje francés.' },
-    { name: 'Vestido Serenata', category: 'fiesta', tag: 'Fiesta', price: '$1,850', colorA: '#fdf1de', colorB: '#e8cd9a', desc: 'Brillo sutil, ideal para celebrar.' },
-    { name: 'Vestido Medianoche', category: 'noche', tag: 'Noche', price: '$2,300', colorA: '#f1e2e6', colorB: '#7a2b3d', desc: 'Corte sirena en satín profundo.' },
-    { name: 'Vestido Eterna', category: 'boda', tag: 'Boda', price: '$5,100', colorA: '#fbf7f0', colorB: '#c9a35a', desc: 'Bordado de pedrería a mano.' },
-    { name: 'Vestido Ámbar', category: 'noche', tag: 'Noche', price: '$1,990', colorA: '#fdece0', colorB: '#d98040', desc: 'Escote en V con abertura lateral.' },
-    { name: 'Vestido Menta', category: 'casual', tag: 'Casual', price: '$980', colorA: '#eef6ec', colorB: '#9dc3a1', desc: 'Ligero, fresco y muy versátil.' },
-    { name: 'Vestido Brisa', category: 'casual', tag: 'Casual', price: '$760', colorA: '#f3f7f7', colorB: '#a7c4c4', desc: 'Perfecto para el día a día con estilo.' },
+    { name: 'Vestido Celeste', category: 'quince', tag: 'Quince años', photo: 'assets/img/vestido-quince-azul.png', desc: 'Falda voluminosa en tul bordado con pedrería y aplicaciones florales.' },
+    { name: 'Vestido Primavera', category: 'quince', tag: 'Quince años', photo: 'assets/img/vestido-quince-rosa.png', desc: 'Escote y mangas abullonadas con encaje floral en rosa palo.' },
+    { name: 'Vestido Valentina', category: 'boda', tag: 'Boda', photo: 'assets/img/vestido-boda-marfil.png', desc: 'Corte sirena asimétrico con abertura, pedrería y encaje francés.' },
+    { name: 'Vestido Serenata', category: 'fiesta', tag: 'Fiesta', colorA: '#fdf1de', colorB: '#e8cd9a', desc: 'Brillo sutil, ideal para celebrar.' },
+    { name: 'Vestido Medianoche', category: 'noche', tag: 'Noche', colorA: '#f1e2e6', colorB: '#7a2b3d', desc: 'Corte sirena en satín profundo.' },
+    { name: 'Vestido Eterna', category: 'boda', tag: 'Boda', colorA: '#fbf7f0', colorB: '#c9a35a', desc: 'Bordado de pedrería a mano.' },
+    { name: 'Vestido Ámbar', category: 'noche', tag: 'Noche', colorA: '#fdece0', colorB: '#d98040', desc: 'Escote en V con abertura lateral.' },
+    { name: 'Vestido Menta', category: 'casual', tag: 'Casual', colorA: '#eef6ec', colorB: '#9dc3a1', desc: 'Ligero, fresco y muy versátil.' },
+    { name: 'Vestido Brisa', category: 'casual', tag: 'Casual', colorA: '#f3f7f7', colorB: '#a7c4c4', desc: 'Perfecto para el día a día con estilo.' },
   ];
 
   const grid = document.getElementById('collectionGrid');
@@ -158,7 +158,6 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
       <div class="card__body">
         <h3>${d.name}</h3>
-        <span class="price">${d.price}</span>
         <p>${d.desc}</p>
         <a href="#contacto" class="card__link">Solicitar información <span>→</span></a>
       </div>`;

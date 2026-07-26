@@ -488,7 +488,6 @@ section { position: relative; }
 }
 .card__body { padding: 22px 24px 26px; }
 .card__body h3 { font-size: 1.15rem; margin-bottom: 6px; }
-.card__body .price { color: var(--rose); font-weight: 700; font-size: 1.1rem; }
 .card__body p { color: var(--gray); font-size: 0.88rem; margin: 8px 0 16px; }
 .card__link {
   font-size: 0.85rem;
@@ -589,6 +588,22 @@ section { position: relative; }
 }
 .contact__info p { color: var(--gray); margin-bottom: 24px; }
 .contact__list li { margin-bottom: 14px; font-weight: 500; }
+.map-link {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--burgundy);
+  margin-top: 6px;
+  transition: color var(--transition);
+}
+.map-link:hover { color: var(--burgundy-dark); }
+.contact__map {
+  margin-top: 60px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+.contact__map iframe { width: 100%; height: 360px; border: 0; display: block; }
 .socials { display: flex; gap: 12px; margin-top: 24px; }
 .socials a {
   width: 40px; height: 40px;
