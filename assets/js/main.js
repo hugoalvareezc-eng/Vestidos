@@ -118,43 +118,25 @@ document.addEventListener('DOMContentLoaded', () => {
     { name: 'Vestido Celeste', category: 'quince', tag: 'Quince años', photo: 'assets/img/vestido-quince-azul.png', desc: 'Falda voluminosa en tul bordado con pedrería y aplicaciones florales.' },
     { name: 'Vestido Primavera', category: 'quince', tag: 'Quince años', photo: 'assets/img/vestido-quince-rosa.png', desc: 'Escote y mangas abullonadas con encaje floral en rosa palo.' },
     { name: 'Vestido Valentina', category: 'boda', tag: 'Boda', photo: 'assets/img/vestido-boda-marfil.png', desc: 'Corte sirena asimétrico con abertura, pedrería y encaje francés.' },
-    { name: 'Vestido Serenata', category: 'fiesta', tag: 'Fiesta', colorA: '#fdf1de', colorB: '#e8cd9a', desc: 'Brillo sutil, ideal para celebrar.' },
-    { name: 'Vestido Medianoche', category: 'noche', tag: 'Noche', colorA: '#f1e2e6', colorB: '#7a2b3d', desc: 'Corte sirena en satín profundo.' },
-    { name: 'Vestido Eterna', category: 'boda', tag: 'Boda', colorA: '#fbf7f0', colorB: '#c9a35a', desc: 'Bordado de pedrería a mano.' },
-    { name: 'Vestido Ámbar', category: 'noche', tag: 'Noche', colorA: '#fdece0', colorB: '#d98040', desc: 'Escote en V con abertura lateral.' },
-    { name: 'Vestido Menta', category: 'casual', tag: 'Casual', colorA: '#eef6ec', colorB: '#9dc3a1', desc: 'Ligero, fresco y muy versátil.' },
-    { name: 'Vestido Brisa', category: 'casual', tag: 'Casual', colorA: '#f3f7f7', colorB: '#a7c4c4', desc: 'Perfecto para el día a día con estilo.' },
+    { name: 'Vestido Lila Bordado', category: 'quince', tag: 'Quince años', photo: 'assets/img/vestido-lila-bordado.jpg', desc: 'Corte princesa en tul lila con flores 3D bordadas a mano y pedrería.' },
+    { name: 'Vestido Rosa Palo', category: 'ninas', tag: 'Niñas', photo: 'assets/img/vestido-rosa-palo-volantes.jpg', desc: 'Brillo rosa palo y dorado con flores 3D bordadas en el corpiño.' },
+    { name: 'Vestido Blanco Floral', category: 'ninas', tag: 'Niñas', photo: 'assets/img/vestido-blanco-floral.jpg', desc: 'Encaje bordado con cinturón de flores en tonos rosa y plata.' },
+    { name: 'Vestido Rojo y Dorado', category: 'ninas', tag: 'Niñas', photo: 'assets/img/vestido-rojo-dorado.jpg', desc: 'Encaje dorado sobre tul rojo, con mangas bordadas.' },
+    { name: 'Vestido Rosa Encaje', category: 'ninas', tag: 'Niñas', photo: 'assets/img/vestido-rosa-encaje.jpg', desc: 'Corpiño floral bordado con falda en tul rosa y encaje en el dobladillo.' },
+    { name: 'Vestido Blanco Perlas', category: 'ninas', tag: 'Niñas', photo: 'assets/img/vestido-blanco-perlas.jpg', desc: 'Encaje guipur con cinturón de perlas y falda en tul vaporoso.' },
   ];
 
   const grid = document.getElementById('collectionGrid');
-  const dressSVG = (colorA, colorB) => `
-    <svg viewBox="0 0 240 320" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="grad-${colorB.replace('#','')}" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="${colorA}"/>
-          <stop offset="100%" stop-color="${colorB}"/>
-        </linearGradient>
-      </defs>
-      <path d="M95,36 Q73,66 87,108 Q99,134 109,150 Q58,196 33,300 L207,300 Q182,196 131,150 Q141,134 153,108 Q167,66 145,36 Q120,54 95,36 Z" fill="url(#grad-${colorB.replace('#','')})"/>
-      <path d="M109,150 Q120,160 131,150" stroke="#2b1d22" stroke-width="2" fill="none" opacity="0.3"/>
-      <path d="M60,230 Q120,248 180,230" stroke="#2b1d22" stroke-width="2" fill="none" opacity="0.15"/>
-    </svg>`;
 
   dresses.forEach((d, i) => {
     const card = document.createElement('article');
     card.className = 'card';
     card.dataset.category = d.category;
     card.style.setProperty('--delay', `${(i % 3) * 120}ms`);
-    const media = d.photo
-      ? `<img src="${d.photo}" alt="${d.name}, ${d.tag.toLowerCase()}" loading="lazy">`
-      : dressSVG(d.colorA, d.colorB);
-    const bg = d.photo
-      ? `linear-gradient(160deg, #f7ece4, #ffffff)`
-      : `linear-gradient(160deg, ${d.colorA}, #ffffff)`;
     card.innerHTML = `
-      <div class="card__media" style="background:${bg}">
+      <div class="card__media" style="background:linear-gradient(160deg, #f7ece4, #ffffff)">
         <span class="card__tag">${d.tag}</span>
-        ${media}
+        <img src="${d.photo}" alt="${d.name}, ${d.tag.toLowerCase()}" loading="lazy">
       </div>
       <div class="card__body">
         <h3>${d.name}</h3>
