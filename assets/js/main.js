@@ -115,16 +115,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------------- Collection cards (generated) ---------------- */
   const dresses = [
-    { name: 'Vestido Celeste', category: 'quince', tag: 'Quince años', photo: 'assets/img/vestido-quince-azul.png', desc: 'Falda voluminosa en tul bordado con pedrería y aplicaciones florales.' },
-    { name: 'Vestido Primavera', category: 'quince', tag: 'Quince años', photo: 'assets/img/vestido-quince-rosa.png', desc: 'Escote y mangas abullonadas con encaje floral en rosa palo.' },
-    { name: 'Vestido Valentina', category: 'boda', tag: 'Boda', photo: 'assets/img/vestido-boda-marfil.png', desc: 'Corte sirena asimétrico con abertura, pedrería y encaje francés.' },
     { name: 'Vestido Lila Bordado', category: 'quince', tag: 'Quince años', photo: 'assets/img/vestido-lila-bordado.jpg', desc: 'Corte princesa en tul lila con flores 3D bordadas a mano y pedrería.' },
     { name: 'Vestido Rosa Palo', category: 'ninas', tag: 'Niñas', photo: 'assets/img/vestido-rosa-palo-volantes.jpg', desc: 'Brillo rosa palo y dorado con flores 3D bordadas en el corpiño.' },
     { name: 'Vestido Blanco Floral', category: 'ninas', tag: 'Niñas', photo: 'assets/img/vestido-blanco-floral.jpg', desc: 'Encaje bordado con cinturón de flores en tonos rosa y plata.' },
     { name: 'Vestido Rojo y Dorado', category: 'ninas', tag: 'Niñas', photo: 'assets/img/vestido-rojo-dorado.jpg', desc: 'Encaje dorado sobre tul rojo, con mangas bordadas.' },
-    { name: 'Vestido Rosa Encaje', category: 'ninas', tag: 'Niñas', photo: 'assets/img/vestido-rosa-encaje.jpg', desc: 'Corpiño floral bordado con falda en tul rosa y encaje en el dobladillo.' },
-    { name: 'Vestido Blanco Perlas', category: 'ninas', tag: 'Niñas', photo: 'assets/img/vestido-blanco-perlas.jpg', desc: 'Encaje guipur con cinturón de perlas y falda en tul vaporoso.' },
-  ];
+    ];
 
   const grid = document.getElementById('collectionGrid');
 
